@@ -1,0 +1,10 @@
+extends layout 
+block content
+  h1= title
+  p Welcome to #{title}
+  for genre in genres 
+    p #{genre.name} #{genre._id}
+  form(method="post") 
+    label name 
+      input(type="text", name="name")
+    button(type="submit") add new genre 

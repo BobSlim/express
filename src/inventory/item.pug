@@ -1,0 +1,32 @@
+extends layout 
+block content 
+    table
+        thead
+            tr 
+                td id
+                td name
+                td description
+                td price
+                td stock
+                td category
+        tbody
+            for item in items
+                tr 
+                    td #{item.id}
+                    td #{item.name}
+                    td #{item.description}
+                    td #{item.price}
+                    td #{item.stock}
+                    td #{item.category}
+    form(action="", method="post") 
+        label Name:
+            input(type="text", name="name")
+        label Description:
+            input(type="text", name="description")
+        label Price:
+            input(type="text", name="price")
+        label Stock:
+            input(type="text", name="stock")
+        label Category:
+            input(type="text", name="category")
+        button(type="submit") New Item

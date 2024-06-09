@@ -1,0 +1,25 @@
+extends layout
+block content 
+	table 
+		thead 
+			tr 
+				td id
+				td name
+				td description
+				td actions
+		tbody 
+			for category in categorys
+				tr
+					td #{category.id}
+					td #{category.name}
+					td #{category.description}
+					td 
+						a(href=`/inventory${category.url}`) view
+						button(data-id=`${category.id}` onclick="handlePut") replace 
+						button(data-id=`${category.id}` onclick="handleDelete") delete
+	form(action="", method="post") 
+		label Name:
+			input(type="text", name="name")
+		label Description:
+			input(type="text", name="description")
+		button(type="submit") New Category

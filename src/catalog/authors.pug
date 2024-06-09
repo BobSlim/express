@@ -1,0 +1,16 @@
+extends layout 
+block content 
+	h1 message 
+	ul 
+		for author in authors
+			li #{author.name} #{author.date_of_birth} #{author.date_of_death}
+	form(method="post") 
+		label(for="") First Name
+			input(type="text", name="first_name")
+		label(for="") Family Name
+			input(type="text", name="family_name")
+		label(for="") Dob
+			input(type="date", name="date_of_birth")
+		label(for="") Dod
+			input(type="date", name="date_of_death")
+		button(type="submit") Add new author

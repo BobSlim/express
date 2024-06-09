@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  for message in messages 
+    p #{message.text} #{message.user} #{message.added}
+  form(action="/board/", method="post") 
+    label(for="") Message
+      input(type="text" name="text") 
+    label(for="") Name
+      input(type="text" name="user")
+    button(type="submit") Submit
