@@ -8,7 +8,7 @@ export const crudRouterMaker = (mongooseModel, listView, url) => {
 	});
 	newRouter.post("/", async (req, res, next) => {
 		await mongooseModel.create(req.body);
-		res.redirect(url);
+		return res.redirect(url);
 	});
 	newRouter.get("/:id", async (req, res, next) => {
 		return res.json(await mongooseModel.getOne(req.params.id));
