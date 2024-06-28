@@ -4,7 +4,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "nodemon --env-file=.env ./bin/www"
+		"dev": "nodemon --env-file=.env ./bin/www",
+		"start": "node ./bin/www"
 	},
 	"dependencies": {
 		"cookie-parser": "^1.4.4",
