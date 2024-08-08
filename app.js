@@ -20,16 +20,15 @@ app.use(cookieParser());
 app.use(express.static("./public"));
 
 import indexRouter from "./src/catalog/index.js";
-app.use("/", indexRouter);
 import usersRouter from "./src/UsersRouter.js";
-app.use("/users", usersRouter);
 import boardRouter from "./src/Comment.js";
-app.use("/board", boardRouter);
-
 import catalogApp from "./src/catalog/index.js";
-app.use("/catalog", catalogApp);
-
 import { inventoryApp } from "./src/inventory/index.js";
+
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/board", boardRouter);
+app.use("/catalog", catalogApp);
 app.use("/inventory", inventoryApp);
 
 // catch 404 and forward to error handler

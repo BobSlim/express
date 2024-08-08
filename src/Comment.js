@@ -16,7 +16,7 @@ const Comment = mongoose.model("Comment", CommentSchema);
 
 const getComments = async (req, res, next) => {
 	const messages = await Comment.find({}).exec();
-	return res.render("comments", { title: "Express", messages });
+	return res.render("orphans/comments", { title: "Express", messages });
 };
 
 const postComment = (req, res, next) => {
