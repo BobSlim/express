@@ -1,10 +1,7 @@
 extends ../layout
 block content
-	div(class='container-fluid')
-	div(class='row')
-		div(class='col-sm-2')
-		block sidebar
-			ul(class='sidebar-nav')
+	nav(class='col-sm-2')
+		ul(class='sidebar-nav')
 			li
 				a(href='/catalog') Home
 			li
@@ -16,4 +13,4 @@ block content
 			li
 				a(href='/catalog/genres') All genres
 		div(class='col-sm-10')
-		block content
+			block content

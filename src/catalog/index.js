@@ -12,7 +12,7 @@ catalogApp.set("views", import.meta.dirname);
 
 /* GET home page. */
 catalogApp.get("/", function (req, res, next) {
-	res.render("../index.pug", { title: "Express" });
+	res.render("layout", { title: "Express" });
 });
 
 export default catalogApp;

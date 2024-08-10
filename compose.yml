@@ -1,0 +1,5 @@
+name: express
+services:
+    backend:
+        ports:
+            - "8080:3000"
