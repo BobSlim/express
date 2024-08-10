@@ -1,17 +1,17 @@
 import e from "express";
 const catalogApp = e();
 
-import genres from "./Genre.js";
 import authors from "./Author.js";
 import books from "./Book.js";
+import genres from "./Genre.js";
 
 catalogApp.set("views", import.meta.dirname);
-[genres, authors, books].forEach((x) => {
-	catalogApp.use(x.url, x.router);
-});
+for (const element of [genres, authors, books]) {
+	catalogApp.use(element.url, element.router);
+}
 
 /* GET home page. */
-catalogApp.get("/", function (req, res, next) {
+catalogApp.get("/", (req, res, next) => {
 	res.render("layout", { title: "Express" });
 });
 

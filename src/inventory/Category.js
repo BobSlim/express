@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { crudRouterMaker, crudOptions } from "./shared.js";
+import { crudOptions, crudRouterMaker } from "./shared.js";
 
 const categoryUrl = "/categorys";
 const categorySchema = new Schema(

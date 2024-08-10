@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { Schema, model } from "mongoose";
-import Genre from "./Genre.js";
 import AuthorModel from "./Author.js";
+import Genre from "./Genre.js";
 
 const bookUrl = "/catalog/books";
 

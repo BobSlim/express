@@ -1,6 +1,6 @@
+import express from "express";
 /// @ts-check
 import mongoose from "mongoose";
-import express from "express";
 
 const CommentSchema = new mongoose.Schema({
 	text: { type: String, required: true },

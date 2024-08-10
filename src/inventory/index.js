@@ -6,9 +6,9 @@ inventoryApp.set("views", import.meta.dirname);
 import Category from "./Category.js";
 import Item from "./Item.js";
 
-[Category, Item].forEach((x) => {
+for (const x of [Category, Item]) {
 	inventoryApp.use(x.url, x.router);
-});
+}
 
 inventoryApp.get("/", async (req, res, next) => {
 	res.render("layout");
